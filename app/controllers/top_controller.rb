@@ -10,6 +10,7 @@ class TopController < ApplicationController
     end
     
     def login
+        
         user = User.find_by(uid: params[:uid])
         
         if user
