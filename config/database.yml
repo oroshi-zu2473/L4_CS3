@@ -22,7 +22,9 @@ test:
 
 production:
   <<: *default
-  #database: db/production.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   database: test_3fgu
   username: test_3fgu_user
   password: <%= ENV['MYSITE_DATABASE_PASSWORD'] %>
